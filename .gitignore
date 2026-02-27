@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+
+# Virtual envs
+.venv/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.vscode/
+.idea/
+
+# Logs / artifacts
+*.log
+MUJOCO_LOG.TXT
+
+# ML/RL outputs (keep out of git)
+runs/
+models/
+checkpoints/
+wandb/
+
+# Data / large binaries (optional)
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.npz
+*.npy
+
+
