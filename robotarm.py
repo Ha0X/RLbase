@@ -10,7 +10,7 @@ p.setGravity(0, 0, -9.8)
 planeId = p.loadURDF("plane.urdf")
 pandaId = p.loadURDF("franka_panda/panda.urdf", [0, 0, 0], useFixedBase=True)
 tableId = p.loadURDF("table/table.urdf", [0.5, 0, -0.65])
-objectId = p.loadURDF("cube.urdf", [0.6, 0, 0.02], globalScaling=0.05)
+objectId = p.loadURDF("cube.urdf", [1.0, 0, 0.02], globalScaling=0.05)
 
 # 改进物体属性提高抓取成功率
 p.changeDynamics(objectId, -1, mass=0.1)
@@ -26,7 +26,10 @@ p.resetJointState(pandaId, 5, 1.57)
 p.resetJointState(pandaId, 6, 0.785)   
 
 end_effector_id = 11
-target_position = [0.6 , 0, 0.1]  
+
+
+object_position, _ = p.getBasePositionAndOrientation(objectId)
+target_position = np.array(object_position) + np.array([0, 0, 0.08])
 target_orientation = p.getQuaternionFromEuler([np.pi, 0, 0]) #四元数表示
 
 # 生成轨迹点
