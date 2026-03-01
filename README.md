@@ -1,29 +1,34 @@
 # RLbase
 
 
-1) **强化学习基础算法**（DQN / SAC / PPO 等）
-2) **在 PyBullet 环境中用强化学习训练机械臂抓取**
+
+- **强化学习基础算法**（DQN / SAC / PPO 等）
+- **在 PyBullet 环境中强化学习训练机械臂抓取**
 
 
 
 ## 目录结构
 
-- `scripts/`: 
+- `scripts/`: 主要可运行入口
   - `scripts/basics/`: 强化学习基础算法（Q-learning / DQN / Actor-Critic / REINFORCE 等）
   - `scripts/pybullet/`: PyBullet 相关训练入口（抓取 / 连续控制）
-- `arm/`: PyBullet Reacher 连续控制（PPO-Clip + GAE）
+- `arm/`: PyBullet Reacher 连续控制实验（ PPO-Clip + GAE）
 - `projects/pybullet_panda_grasp/`: **PyBullet Panda 抓取**（Gym 环境 + PPO 训练入口 + scripted demo）
 
 ## 环境
 
-建议使用虚拟环境：
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install -U pip
 pip install -r requirements.txt
-pip install pybullet pybullet-envs-gymnasium
 ```
 
+
+```bash
+pip install pybullet pybullet-envs-gymnasium
+```
 
 ## 运行示例
 
@@ -55,8 +60,6 @@ python -m scripts.pybullet.panda_grasp_ppo --gui
 ```bash
 python -m scripts.pybullet.reacher_ppo_clip
 ```
-
-
 
 
 
