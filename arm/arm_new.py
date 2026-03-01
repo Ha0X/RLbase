@@ -1,4 +1,4 @@
-# ppo_clip_reacher.py —— 纯手写 PPO-Clip + GAE（连续动作 / PyBullet Reacher）
+# PPO-Clip + GAE（连续动作 / PyBullet Reacher）
 import math, random, time
 import numpy as np
 import torch
@@ -32,7 +32,7 @@ SEED = 2024
 torch.manual_seed(SEED); np.random.seed(SEED); random.seed(SEED)
 if torch.cuda.is_available(): torch.cuda.manual_seed_all(SEED)
 
-# =================== 实用函数 ===================
+# ======================================
 def scale_action(a_tanh, low, high):
     """(-1,1)->[low,high]；若本身就是[-1,1]，这步等价为原值"""
     return low + (a_tanh + 1.0) * 0.5 * (high - low)

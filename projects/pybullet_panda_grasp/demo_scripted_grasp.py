@@ -1,3 +1,13 @@
+"""
+Scripted IK + Grasp Demo (non-RL baseline).
+
+This is a simple scripted demo showing how to use PyBullet's IK to control
+a Panda arm to grasp an object. It serves as a reference/sanity check for
+the RL training in this project.
+
+Run:
+    python projects/pybullet_panda_grasp/demo_scripted_grasp.py
+"""
 import pybullet as p
 import numpy as np
 import time

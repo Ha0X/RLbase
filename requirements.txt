@@ -1,0 +1,12 @@
+numpy
+gymnasium[classic-control]
+torch
+tqdm
+tensorboard
+
+# Optional / experiment-specific:
+stable-baselines3
+pybullet
+pybullet-envs-gymnasium
+
+

@@ -26,6 +26,13 @@ models/
 checkpoints/
 wandb/
 
+# Common datasets / downloads
+data/
+
+# PyBullet local artifacts
+pybullet/log/
+pybullet/timings_*.json
+
 # Data / large binaries (optional)
 *.pt
 *.pth

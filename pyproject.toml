@@ -1,0 +1,17 @@
+[project]
+name = "rlbase"
+version = "0.1.0"
+description = "Reinforcement learning algorithm learning/experiments (plus some generative model demos)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+
