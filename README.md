@@ -9,6 +9,7 @@
 
 ## 目录结构
 
+- `notes.md`：RL基础学习笔记
 - `scripts/`: 主要可运行入口
   - `scripts/basics/`: 强化学习基础算法（Q-learning / DQN / Actor-Critic / REINFORCE 等）
   - `scripts/pybullet/`: PyBullet 相关训练入口（抓取 / 连续控制）
